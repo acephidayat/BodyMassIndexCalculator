@@ -26,6 +26,19 @@ const Bmi = () => {
     });
   };
 
+  const metricBmi = (height, weight) => {
+    if (height > 0 && weight > 0) {
+      const bmi = (weight / height / height) * 10000;
+      console.log(bmi);
+    }
+  };
+
+  useEffect(() => {
+    //akan menghitung bmi dari tinggi dan berat melalui method
+
+    metricBmi(heightCount, weightCount);
+  }, [heightCount, weightCount]);
+
   return (
     <>
       <div className="container">
